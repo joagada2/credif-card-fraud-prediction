@@ -56,7 +56,7 @@ model_tracking:
   artifact_path: model
   registered_model_name: "fraud_detection_model"
 
-mlflow_tracking_ui:
-mlflow_USERNAME:
-mlflow_PASSWORD:
+mlflow_tracking_ui: https://dagshub.com/joe88data/credit_card_fraud_prediction.mlflow
+mlflow_USERNAME: joe88data
+mlflow_PASSWORD: e94114ca328c75772401898d749decb6dbcbeb21
 
