@@ -1,0 +1,17 @@
+pred_set_names:
+  - one
+  - two
+  - three
+  - four
+  - five
+
+input_file:
+  path: data/prediction_data/prediction_input/prediction_input_{}.csv
+
+output_file:
+  path: data/prediction_data/prediction_output/prediction_output_{}.csv
+
+model:
+  dir: models
+  name: xgboost
+  path: ${model.dir}/${model.name}

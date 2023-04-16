@@ -1,0 +1,62 @@
+raw:
+  path: data/training_data/raw_data/credit_card_transaction_data.csv
+
+processed:
+  path: data/processed_data/processed_transaction_data.csv
+
+final:
+  dir: data/training_data/final_data
+  X_train:
+    name: X_train.csv
+    path: ${processed.dir}/${processed.X_train.name}
+  X_test:
+    name: X_test.csv
+    path: ${processed.dir}/${processed.X_test.name}
+  y_train:
+    name: y_train.csv
+    path: ${processed.dir}/${processed.y_train.name}
+  y_test:
+    name: y_test.csv
+    path: ${processed.dir}/${processed.y_test.name}
+
+model:
+  dir: models
+  name: xgboost
+  path: ${model.dir}/${model.name}
+
+input_file_name: credit_card_transaction_data.csv
+  max_depth:
+    low: 1
+    high: 18
+    q: 1
+  gamma:
+    low: 0
+    high: 9
+  reg_alpha:
+    low: 40
+    high: 180
+    q: 1
+  reg_lambda:
+    low: 0
+    high: 100
+  colsample_bytree:
+    low: 0.5
+    high: 1
+  min_child_weight:
+    low: 0
+    high: 10
+    q: 1
+  n_estimators: 100
+  seed: 0
+  use_label_encoder: False
+  objective: "binary:logistic"
+  eval_metric: auc
+  early_stopping_rounds: 10
+model_tracking:
+  artifact_path: model
+  registered_model_name: "fraud_detection_model"
+
+mlflow_tracking_ui:
+mlflow_USERNAME:
+mlflow_PASSWORD:
+
