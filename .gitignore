@@ -133,4 +133,4 @@ logs
 data/artifacts
 data/intermedia_data
 data/prediction_outputdata 
-models 
+data 
